@@ -23,7 +23,7 @@ const fontRoot = resolve('node_modules/@fontsource/roboto/files');
 // Node's fs pools small reads into a shared 64KB ArrayBuffer, so `buffer.buffer`
 // can start well before the file's actual bytes — slice to the real range.
 function toArrayBuffer(buf: Buffer): ArrayBuffer {
-  return buf.buffer.slice(buf.byteOffset, buf.byteOffset + buf.byteLength);
+  return buf.buffer.slice(buf.byteOffset, buf.byteOffset + buf.byteLength) as ArrayBuffer;
 }
 
 const fontRegular = readFileSync(resolve(fontRoot, 'roboto-latin-400-normal.woff'));

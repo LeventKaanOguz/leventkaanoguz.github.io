@@ -35,9 +35,11 @@ jobs:
           # Forks should set these as repository variables in Settings → Secrets and variables → Actions.
           # ASTRO_SITE: site origin, e.g. https://username.github.io
           # ASTRO_BASE: project-page base path, e.g. /repo-name (leave empty for user/org pages)
-          # The fallbacks below are only for this template repository's own deployment.
-          ASTRO_SITE: ${{ vars.ASTRO_SITE || 'https://dadangnh.github.io' }}
-          ASTRO_BASE: ${{ vars.ASTRO_BASE || '/as-folio' }}
+          # The template-repo fallbacks below only apply to dadangnh/as-folio's own deployment —
+          # the GitHub Actions API rejects empty repository variables, so a root-domain fork
+          # can't override ASTRO_BASE to '' if the fallback applied unconditionally.
+          ASTRO_SITE: ${{ vars.ASTRO_SITE || (github.repository == 'dadangnh/as-folio' && 'https://dadangnh.github.io' || '') }}
+          ASTRO_BASE: ${{ vars.ASTRO_BASE || (github.repository == 'dadangnh/as-folio' && '/as-folio' || '') }}
 
       - name: Commit updated citations.yml
         run: |
