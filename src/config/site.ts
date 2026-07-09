@@ -32,10 +32,10 @@ export const site = {
   // ─── Identity ──────────────────────────────────────────────────────────────
 
   /** Site title. Shown in the browser tab and navbar. */
-  title: 'Albert Einstein',
+  title: 'Levent Kaan Oğuz',
 
   /** Site description. Used in meta tags. */
-  description: 'A simple, clean, and responsive Astro template for academics. Powered by as-folio.',
+  description: 'Personal website of Levent Kaan Oğuz.',
 
   /** Language code for the site. */
   lang: 'en',
@@ -44,30 +44,26 @@ export const site = {
 
   author: {
     /** Full name shown in navbar, about page heading, and footer. */
-    name: 'Albert Einstein',
+    name: 'Levent Kaan Oğuz',
 
     /** Short email address (used in social links). */
-    email: 'einstein@example.com',
+    email: 'kaan.oguz@metu.edu.tr',
 
     /** Path to profile photo. Place image in public/assets/img/. */
-    avatar: '/assets/img/prof_pic.jpg',
+    avatar: '/assets/img/prof_pic.jpeg',
 
     /**
      * Subtitle below your name on the about page.
      * HTML is supported.
      */
-    subtitle: `Theoretical Physicist
-      &nbsp;·&nbsp;
-      <a href="https://en.wikipedia.org/wiki/Institute_for_Advanced_Study">Institute for Advanced Study</a>,
-      Princeton`,
+    subtitle: `Senior Physics Student at <a href="https://metu.edu.tr/" target="_blank" rel="noopener noreferrer">Middle East Technical University</a>`,
 
     /**
      * Address block below profile photo.
      * HTML is supported.
      */
-    moreInfo: `<p>Institute for Advanced Study</p>
-      <p>Einstein Drive</p>
-      <p>Princeton, NJ 08540</p>`,
+    moreInfo: `<p>Middle East Technical University<br>Physics Department<br>
+Ankara, Turkey</p>`,
   },
 
   // ─── Social links ──────────────────────────────────────────────────────────
@@ -79,19 +75,19 @@ export const site = {
   //   bluesky_handle, medium_username, cv_pdf, rss_icon
 
   socials: {
-    email: 'einstein@example.com',
+    email: 'kaan.oguz@metu.edu.tr',
     x_username: undefined as string | undefined,
     linkedin_username: undefined as string | undefined,
-    github_username: undefined as string | undefined,
+    github_username: "LeventKaanOguz",
     gitlab_username: undefined as string | undefined,
     /** Google Scholar user ID — the part after user= in your Scholar URL */
     scholar_userid: 'qc6CJjYAAAAJ',
-    orcid_id: undefined as string | undefined,
+    orcid_id: '0000-0001-7985-2721',
     /** Inspire HEP author ID */
-    inspire_id: '1010907',
+    inspire_id: undefined as string | undefined,
     researchgate_username: undefined as string | undefined,
     arxiv_id: undefined as string | undefined,
-    youtube_id: undefined as string | undefined,
+    youtube_id: 'LeventKaanOguz',
     instagram_username: undefined as string | undefined,
     mastodon_url: undefined as string | undefined,
     bluesky_handle: undefined as string | undefined,
